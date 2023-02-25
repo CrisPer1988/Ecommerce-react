@@ -1,0 +1,52 @@
+.form__login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: white;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.btn__login {
+    
+}
+
+.content__login-input {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    
+ 
+}
+
+.input__login,
+.btn__login {
+    width: 100%;
+    height: 38px;
+}
+
+.btn__login {
+    background-color: var(--primary);
+    color: white;
+}
+
+.example__login {
+    display: grid;
+    gap: 0.5rem;
+    background-color: #d8f5fd;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.to__register-tittle {
+    color: black;
+}
+
+.to__register-tittle span {
+    color: rgb(5, 163, 255);
+}

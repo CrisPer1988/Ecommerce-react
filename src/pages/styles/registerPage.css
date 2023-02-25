@@ -1,0 +1,35 @@
+.form__register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: white;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.form__register h2 {
+    align-self: flex-start;
+}
+
+.content__input-register {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    
+ 
+}
+
+.input__register,
+.btn__register {
+    width: 100%;
+    height: 38px;
+}
+
+.btn__register {
+    background-color: var(--primary);
+    color: white;
+}
