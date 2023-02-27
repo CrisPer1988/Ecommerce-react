@@ -4,11 +4,17 @@ import CardProduct from '../components/Home/CardProduct';
 import "./styles/home.css"
 
 const Home = () => {
-
+ 
   const {products} = useSelector(state => state)
+
+
 
   return (
     <div className='home__content'>
+      <form>
+        <input type="text" />
+        <button>Search</button>
+      </form>
       <div>
         {
           products?.map(product => (
