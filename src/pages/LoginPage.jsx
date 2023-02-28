@@ -29,7 +29,7 @@ const LoginPage = () => {
 
    const handleClick = () =>{
     localStorage.clear()
-    setToken("")
+    setToken()
    }
 
    if(localStorage.getItem("name")){
