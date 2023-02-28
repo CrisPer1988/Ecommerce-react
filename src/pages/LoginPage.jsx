@@ -33,9 +33,10 @@ const LoginPage = () => {
    }
 
    if(localStorage.getItem("name")){
-    return <div>
+    return <div className='content__login'>
+        <div><i class='bx bxs-user'></i></div>
         <h2>{localStorage.getItem("name")}</h2>
-        <button onClick={handleClick}>Logout</button>
+        <button className='btn__login' onClick={handleClick}>Logout</button>
     </div>
    }else {
     

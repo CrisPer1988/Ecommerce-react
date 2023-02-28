@@ -10,17 +10,11 @@
     border-radius: 15px;
 }
 
-.btn__login {
-    
-}
-
 .content__login-input {
     display: flex;
     flex-direction: column;
     align-items: start;
     width: 100%;
-    
- 
 }
 
 .input__login,
@@ -49,4 +43,34 @@
 
 .to__register-tittle span {
     color: rgb(5, 163, 255);
+}
+
+.content__login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 100px;
+}
+
+.content__login h2 {
+    background-color: #f85555;
+    color: white;
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    border-radius: 15px;
+    
+}
+
+.bxs-user {
+    font-size: 150px;
+    color: rgb(122, 122, 122);
+}
+
+.btn__login {
+    width: 200px;
+    height: 30px;
+    background-color:#4f4f4f; ;
 }

@@ -1,0 +1,18 @@
+.container__puschase {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 20px;
+} 
+
+.purchase__header {
+    max-width: 300px;
+    
+}
+
+@media (max-width: 600px) {
+    .container__puschase {
+        flex-direction: column;
+    }
+}

@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import LoginPage from './pages/LoginPage';
 import PotectedRoutes from './pages/PotectedRoutes';
 import ProductPage from './pages/ProductPage';
+import PurchasesPage from './pages/PurchasesPage';
 import RegisterPage from './pages/RegisterPage';
 import { getCartThunk } from './store/slices/cart.slice';
 import { getAllProductsThunk } from './store/slices/products.slice';
@@ -42,6 +43,7 @@ function App() {
         {/*Rutas protegidas*/ }
         <Route element={<PotectedRoutes />}>
           <Route path='/cart' element={<CartPage />} />
+          <Route path='/purchases' element={<PurchasesPage />} />
         </Route>
         
       </Routes>

@@ -26,7 +26,6 @@ const dispatch = useDispatch()
             dispatch(getCartThunk())
         })
         .catch(err => console.log(err.response))
-
         e.stopPropagation()
     }
 
