@@ -35,13 +35,13 @@ const LoginPage = () => {
    if(localStorage.getItem("name")){
     return <div className='content__login'>
         <div><i class='bx bxs-user'></i></div>
-        <h2>{localStorage.getItem("name")}</h2>
+        <h3 className='name__register'>{localStorage.getItem("name")}</h3>
         <button className='btn__login' onClick={handleClick}>Logout</button>
     </div>
    }else {
     
     return (
-    <div>
+    <div className='content__login'>
         <form className='form__login' onSubmit={handleSubmit(submit)}>
             <h2>Welcome! Enter your email and password to continue</h2>
             <div className='example__login'>

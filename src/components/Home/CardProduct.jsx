@@ -30,22 +30,24 @@ const dispatch = useDispatch()
     }
 
   return (
-    <article onClick={handleClick}>
-        <header className='content__img'>
-            <img src={product.images[0].url} alt="" />
+    <article className='content__card-home' onClick={handleClick}>
+        <header  className='content__img-home'>
+            <img className='img__home' src={product.images[0].url} alt="" />
         </header>
-        <section>
+
+        <section className='info__card'>
+            <hr />
             <header>
                 <h3>{product.brand}</h3>
                 <h2>{product.title}</h2>
             </header>
-            <div>
-                <div>Price</div>
-                <div>${product.price}</div>
-            </div>
-            <button onClick={handleBtnClick}>
+            <div  className='content__price'>
+                <div>Price ${product.price}</div>
+                <button onClick={handleBtnClick}>
             <i className='bx bx-cart'></i>
             </button>
+            </div>
+            
         </section>
     </article>
   )

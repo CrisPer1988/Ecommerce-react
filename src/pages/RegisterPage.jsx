@@ -19,7 +19,7 @@ const submit = data => {
 }
 
   return (
-    <div>
+    <div className='content__register'>
         <form className='form__register' onSubmit={handleSubmit(submit)}>
         <h2>Sign Up</h2>
             <div className='content__input-register'>

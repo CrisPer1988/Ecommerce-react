@@ -2,17 +2,37 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1.5rem;
-    padding: 20px;
+    
+    gap: 1rem;
+    width: 50%;
+    margin: 0 auto;
 } 
 
-.purchase__header {
-    max-width: 300px;
-    
+
+
+
+.purchase__header img {
+    max-width: 100px;
+    min-width: 100px;
+
 }
 
-@media (max-width: 600px) {
+.purchase__card-info {
+    font-size: 1rem;
+    display: flex;
+    
+    align-items: center;
+    gap: 1.5rem;
+}
+
+
+@media (max-width: 750px) {
     .container__puschase {
+        flex-direction: column;
+        /* padding: 0px 300px; */
+    }
+
+    .purchase__card-info {
         flex-direction: column;
     }
 }

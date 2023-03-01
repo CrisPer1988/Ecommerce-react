@@ -1,4 +1,5 @@
 .container__purchase-page {
     display: grid;
-    gap: 2rem;
+   padding-top: 100px;
+   gap: 2.5rem;
 }

@@ -1,3 +1,7 @@
+.content__register {
+    padding-top: 70px;
+}
+
 .form__register {
     display: flex;
     flex-direction: column;
