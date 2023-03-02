@@ -1,0 +1,6 @@
+.content__card-page {
+    display: grid;
+    gap: 2rem;
+    padding-top: 80px;
+
+}

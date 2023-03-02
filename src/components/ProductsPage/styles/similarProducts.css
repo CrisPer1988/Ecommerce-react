@@ -1,0 +1,14 @@
+.container__similar-products {
+    padding-top: 50px;
+}
+
+.content__similar-products {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 30px 50px;
+}
+
+.tittle__similar-products {
+    padding: 0 30px;
+}

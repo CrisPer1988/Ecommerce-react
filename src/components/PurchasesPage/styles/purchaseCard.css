@@ -1,10 +1,8 @@
 .container__puschase {
+    max-width: 900px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    
-    gap: 1rem;
-    width: 50%;
+    gap: 2rem;
     margin: 0 auto;
 } 
 
@@ -18,21 +16,24 @@
 }
 
 .purchase__card-info {
-    font-size: 1rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5rem;
     
-    align-items: center;
-    gap: 1.5rem;
 }
 
 
-@media (max-width: 750px) {
+@media (max-width: 850px) {
     .container__puschase {
         flex-direction: column;
+        gap: 1.5rem;
         /* padding: 0px 300px; */
     }
 
     .purchase__card-info {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 0.5rem;
+        padding: 0 50px;
     }
 }

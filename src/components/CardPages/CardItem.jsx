@@ -36,10 +36,11 @@ const CardItem = ({prodInfo}) => {
                 </li>
                 <li>
                     <span>Quantity {prodInfo.quantity}</span>
-                </li>    
+                </li>   
+                <button className='card__item-btn' onClick={handleDelete}><i class='bx bxs-trash' ></i></button> 
             </ul>
         </body>
-        <button className='card__item-btn' onClick={handleDelete}><i class='bx bxs-trash' ></i></button>
+
     </article>
   )
 }

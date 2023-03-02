@@ -2,13 +2,17 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import CardProduct from '../components/Home/CardProduct';
-import { getProductsByName } from '../store/slices/products.slice';
+import { getAllProductsThunk, getProductsByName } from '../store/slices/products.slice';
 import "./styles/home.css"
 
 
 const Home = () => {
 
   const [categories, setCategories] = useState()
+
+  const [fromTo, setFromTo] = useState({
+    from:0,
+    to: Infinity})
 
  const dispatch = useDispatch()
 
@@ -35,10 +39,48 @@ const Home = () => {
   dispatch(getProductsByName(id, true))
 
  }
- 
+
+const handleSubmitPrice = e => {
+  e.preventDefault()
+  const from = +e.target.from.value.trim()
+  const to = +e.target.to.value.trim()
+  
+  if(from && to){
+    setFromTo({from, to})
+  } else if(from && !to){
+    setFromTo({from, to: Infinity})
+  }else if(!from && to){
+    setFromTo({from: 0, to})
+  }else {
+    setFromTo({from: 0, to: Infinity})
+  }
+}
+
+const filterProduct = product => +product.price >= fromTo.from && +product.price <= fromTo.to
+
+
 
   return (
     <div className='home__content'>
+      <div className='content__filters'>
+      <article className='content__category'>
+        <header className='header__category'>
+          <h3>Price</h3>
+          <i className='bx bx-chevron-down'></i>
+        </header>
+        <hr />
+        <form onSubmit={handleSubmitPrice}>
+          <div className='content__input-filter'>
+          <label htmlFor="from">From</label>
+          <input type="number" id='from' />
+          </div>
+          <div className='content__input-filter'>
+          <label htmlFor="to">To</label>
+          <input type="number" id='to' />
+          </div>
+          <button className='btn__filter-price'>Filter Price</button>
+        </form>
+      </article>
       <article className='content__category'>
         <header className='header__category'>
           <h3>Category</h3>
@@ -46,14 +88,15 @@ const Home = () => {
         </header>
         <hr />
         <ul>
+          <li onClick={() =>dispatch(getAllProductsThunk())}>All Products</li>
           {
             categories?.map(category => (
               <li key={category.id} onClick={() => handleClickCategory(category.id)}>{category.name}</li>
             ))
           }
-        </ul>     
+        </ul>  
       </article>
-
+      </div>
 
 
 
@@ -76,6 +119,7 @@ const Home = () => {
         </ul>
         
       </article> */}
+      
       <div className='content__body-home'>
         <form className='form__search' onSubmit={handleSubmit}>
           <input className='input__search' id='inputSearch' type="text" />
@@ -86,7 +130,7 @@ const Home = () => {
             products?.length === 0 ?
             <h1>X This product does'n exist X</h1>
           :
-            products?.map(product => (
+            products?.filter(filterProduct).map(product => (
               <CardProduct 
                 key={product.id} 
                 product={product}

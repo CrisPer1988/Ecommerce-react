@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { getCartThunk } from '../../store/slices/cart.slice'
 import config from '../../utils/getConfig'
+import "./styles/productsInfo.css"
 
 const ProductInfo = ({product}) => {
 
@@ -36,24 +37,24 @@ const ProductInfo = ({product}) => {
     }
 
   return (
-    <article>
+    <article className='content__products-info'>
         <h3>{product?.brand}</h3>
         <h2>{product?.title}</h2>
         <p>{product?.description}</p>
-        <footer>
-            <section>
+        <footer className='footer__products-info'>
+            <section className='info__products'>
                 <h4>Price</h4>
-                <span>${product?.price}</span>
+                <span className='price'>${product?.price}</span>
             </section>
             <section>
                 <h4>Quantity</h4>
-                <div>
+                <div className='content__counter'>
                     <div onClick={handleMinnus}>-</div>
                     <div>{counter}</div>
                     <div onClick={handleAdd}>+</div>
                 </div>
             </section>
-            <button onClick={handleAddCart}>Add to cart
+            <button onClick={handleAddCart}>
             <i class='bx bx-cart'></i>
             </button>
         </footer>

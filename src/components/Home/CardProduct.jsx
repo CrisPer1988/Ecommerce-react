@@ -42,7 +42,7 @@ const dispatch = useDispatch()
                 <h2>{product.title}</h2>
             </header>
             <div  className='content__price'>
-                <div>Price ${product.price}</div>
+                <h3>Price ${product.price}</h3>
                 <button onClick={handleBtnClick}>
             <i className='bx bx-cart'></i>
             </button>

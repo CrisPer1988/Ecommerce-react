@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import CardItem from '../components/CardPages/CardItem';
 import { getCartThunk } from '../store/slices/cart.slice';
 import config from '../utils/getConfig';
+import "./styles/cardPage.css"
 
 
 const CartPage = () => {
@@ -35,7 +36,7 @@ const CartPage = () => {
 
   return (
     <div>
-        <div>
+        <div className='content__card-page'>
             {
                 cart?.map(prodInfo => (
                     <CardItem

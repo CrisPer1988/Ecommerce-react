@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ProductInfo from '../components/ProductsPage/ProductInfo'
 import SimilarProduct from '../components/ProductsPage/SimilarProduct'
+import SliderImgs from '../components/ProductsPage/SliderImgs'
 
 const ProductPage = () => {
    const {id} = useParams()
@@ -22,6 +23,9 @@ const ProductPage = () => {
 
   return (
     <div>
+        <SliderImgs 
+        product={product}
+        />
         <ProductInfo 
         product={product}
         />

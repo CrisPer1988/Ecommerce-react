@@ -11,9 +11,9 @@ const Header = () => {
         </h1>
         <nav className='nav__bar-content'>
             <ul className='nab__bar'>
-                <li><Link to="/user/login">Login</Link></li>
-                <li><Link to="/purchases">Purchases</Link></li>
-                <li><Link to="/cart">Cart</Link></li>
+                <li><Link to="/user/login"><i class='bx bx-user'></i>Login</Link></li>
+                <li><Link to="/purchases"><i class='bx bx-purchase-tag-alt'></i>Purchases</Link></li>
+                <li><Link to="/cart"><i class='bx bx-cart-alt' ></i>Cart</Link></li>
             </ul>
         </nav>
         </div>  
